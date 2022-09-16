@@ -1,0 +1,9 @@
+[
+  {
+    "arquivos": [
+      "./node_modules/slick-carousel/slick/slick.css",
+      "./node_modules/lity/dist/lity.css",
+      "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    ]
+  }
+]

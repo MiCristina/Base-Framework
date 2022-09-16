@@ -1,0 +1,391 @@
+$coresBtn: (primaria_1, primaria_2, primaria_3, primaria_4, primaria_5, primaria_6, secundaria_1, secundaria_2, secundaria_3, secundaria_4, secundaria_5, secundaria_6, erro, neg_regular, neg_claro, desativo);
+@function sintaxCor( $var) {
+    @if $var==primaria_1 {
+        @return $cor_primaria_1;
+    }
+    @else if $var==primaria_2 {
+        @return $cor_primaria_2;
+    }
+    @else if $var==primaria_3 {
+        @return $cor_primaria_3;
+    }
+    @else if $var==primaria_4 {
+        @return $cor_primaria_4;
+    }
+    @else if $var==primaria_5 {
+        @return $cor_primaria_5;
+    }
+    @else if $var==primaria_6 {
+        @return $cor_primaria_6;
+    }
+    @else if $var==secundaria_1 {
+        @return $cor_secundaria_1;
+    }
+    @else if $var==secundaria_2 {
+        @return $cor_secundaria_2;
+    }
+    @else if $var==secundaria_3 {
+        @return $cor_secundaria_3;
+    }
+    @else if $var==secundaria_4 {
+        @return $cor_secundaria_4;
+    }
+    @else if $var==secundaria_5 {
+        @return $cor_secundaria_5;
+    }
+    @else if $var==secundaria_6 {
+        @return $cor_secundaria_6;
+    }
+    @else if $var==erro {
+        @return $erro;
+    }
+    @else if $var==neg_regular {
+        @return $cor_neg_regular;
+    }
+    @else if $var==neg_claro {
+        @return $cor_neg_claro;
+    }
+    @else if $var==desativo {
+        @return $cor_n_claro;
+    }
+}
+
+@function sintaxHovercor( $var) {
+    @if $var==primaria_1 {
+        $cor_primaria_1: darken($cor_primaria_1, 8%);
+        @return $cor_primaria_1;
+    }
+    @else if $var==primaria_2 {
+        $cor_primaria_2: darken($cor_primaria_2, 8%);
+        @return $cor_primaria_2;
+    }
+    @else if $var==primaria_3 {
+        $cor_primaria_3: darken($cor_primaria_3, 8%);
+        @return $cor_primaria_3;
+    }
+    @else if $var==primaria_4 {
+        $cor_primaria_4: darken($cor_primaria_4, 8%);
+        @return $cor_primaria_4;
+    }
+    @else if $var==primaria_5 {
+        $cor_primaria_5: darken($cor_primaria_5, 8%);
+        @return $cor_primaria_5;
+    }
+    @else if $var==primaria_6 {
+        $cor_primaria_6: darken($cor_primaria_6, 8%);
+        @return $cor_primaria_6;
+    }
+    @else if $var==secundaria_1 {
+        $cor_secundaria_1: darken($cor_secundaria_1, 8%);
+        @return $cor_secundaria_1;
+    }
+    @else if $var==secundaria_2 {
+        $cor_secundaria_2: darken($cor_secundaria_2, 8%);
+        @return $cor_secundaria_2;
+    }
+    @else if $var==secundaria_3 {
+        $cor_secundaria_3: darken($cor_secundaria_3, 8%);
+        @return $cor_secundaria_3;
+    }
+    @else if $var==secundaria_4 {
+        $cor_secundaria_4: darken($cor_secundaria_4, 8%);
+        @return $cor_secundaria_4;
+    }
+    @else if $var==secundaria_5 {
+        $cor_secundaria_5: darken($cor_secundaria_5, 8%);
+        @return $cor_secundaria_5;
+    }
+    @else if $var==secundaria_6 {
+        $cor_secundaria_6: darken($cor_secundaria_6, 8%);
+        @return $cor_secundaria_6;
+    }
+    @else if $var==erro {
+        $erro: darken($erro, 8%);
+        @return $erro;
+    }
+    @else if $var==neg_regular {
+        $cor_neg_regular: darken($cor_neg_regular, 8%);
+        @return $cor_neg_regular;
+    }
+    @else if $var==neg_claro {
+        $cor_neg_claro: darken($cor_neg_claro, 8%);
+        @return $cor_neg_claro;
+    }
+    @else if $var==desativo {
+        $cor_n_claro: darken($cor_n_claro, 8%);
+        @return $cor_n_claro;
+    }
+}
+
+@function sintaxTextcor( $var) {
+    @if $var==primaria_1 {
+        @return $cor_n_Xxclaro;
+    }
+    @else if $var==primaria_2 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==primaria_3 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==primaria_4 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==primaria_5 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==primaria_6 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==secundaria_1 {
+        @return $cor_n_Xxclaro;
+    }
+    @else if $var==secundaria_2 {
+        @return $cor_n_Xxclaro;
+    }
+    @else if $var==secundaria_3 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==secundaria_4 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==secundaria_5 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==secundaria_6 {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==erro {
+        @return $cor_n_Xxclaro;
+    }
+    @else if $var==neg_regular {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==neg_claro {
+        @return $cor_n_Xxescuro;
+    }
+    @else if $var==desativo {
+        @return $cor_n_regular;
+    }
+}
+
+.btn {
+    background-color: $cor_primaria_1;
+    height: 2rem;
+    @include Small ($font-bold, 1.5);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    text-align: center;
+    color: $cor_n_Xxclaro;
+    -webkit-box-align: center;
+    align-items: center;
+    background-position: center center;
+    border-radius: $spacing-xs;
+    padding: $spacing-xxs $spacing-s;
+    overflow: hidden;
+    text-decoration: none;
+    @extend %transition;
+    &:hover {
+        background-color: darken($cor_primaria_1, 8%);
+    }
+    &[class*=" icon-"] {
+        &:before {
+            margin-right: $spacing-xs;
+        }
+    }
+    @include small {
+        height: 2rem;
+        @include Small ($font-bold, 1.5);
+        padding: $spacing-xxs $spacing-s;
+    }
+    @include medium {
+        height: 2rem;
+        @include Small ($font-bold, 1.5);
+        padding: $spacing-xxs $spacing-s;
+    }
+    @include large {
+        height: 2.5rem;
+        @include Body2 ($font-bold, 1.5);
+        padding: $spacing-xxs $spacing-s;
+    }
+    @include extra-large {
+        height: 2.5rem;
+        @include Body2 ($font-bold, 1.5);
+        padding: $spacing-xxs $spacing-s;
+    }
+    @include full-screem {
+        height: 3rem;
+        @include Body1 ($font-bold, 1.5);
+        padding: $spacing-xxs $spacing-m;
+    }
+    @each $cor in $coresBtn {
+        &.btn-#{$cor} {
+            background-color: sintaxCor( $cor);
+            color: sintaxTextcor( $cor);
+            &:hover {
+                background-color: sintaxHovercor( $cor);
+            }
+        }
+    }
+    &.btn-dark {
+        background-color: $cor_n_Xxescuro;
+        @each $cor in $coresBtn {
+            &.btn-#{$cor} {
+                color: sintaxCor( $cor);
+                &:hover {
+                    background-color: sintaxCor( $cor);
+                    color: sintaxTextcor( $cor);
+                }
+            }
+        }
+    }
+    &.btn-light {
+        background-color: $cor_n_Xxclaro;
+        @each $cor in $coresBtn {
+            &.btn-#{$cor} {
+                color: sintaxCor( $cor);
+                &:hover {
+                    background-color: sintaxCor( $cor);
+                    color: sintaxTextcor( $cor);
+                }
+            }
+        }
+    }
+    &.btn-ghost {
+        background-color: transparent;
+        border: 2px solid;
+        color: $cor_primaria_1;
+        padding: calc(#{$spacing-xxs} - 2px) calc(#{$spacing-s} - 2px);
+        &:hover {
+            color: $cor_n_Xxclaro;
+            background-color: $cor_primaria_1;
+            border-color: $cor_primaria_1;
+        }
+        @include small {
+            padding: calc(#{$spacing-xxs} - 2px) calc(#{$spacing-s} - 2px);
+        }
+        @include medium {
+            padding: calc(#{$spacing-xxs} - 2px) calc(#{$spacing-s} - 2px);
+        }
+        @include large {
+            padding: calc(#{$spacing-xxs} - 2px) calc(#{$spacing-s} - 2px);
+        }
+        @include extra-large {
+            padding: calc(#{$spacing-xxs} - 2px) calc(#{$spacing-s} - 2px);
+        }
+        @include full-screem {
+            padding: calc(#{$spacing-xxs} - 2px) calc(#{$spacing-m} - 2px);
+        }
+        @each $cor in $coresBtn {
+            &.btn-#{$cor} {
+                color: sintaxCor( $cor);
+                &:hover {
+                    background-color: sintaxCor( $cor);
+                    color: sintaxTextcor( $cor);
+                    border-color: sintaxCor( $cor);
+                }
+                &.btn-light {
+                    border-color: $cor_n_Xxclaro;
+                    color: $cor_n_Xxclaro;
+                    &:hover {
+                        background-color: $cor_n_Xxclaro;
+                        color: sintaxCor( $cor);
+                        ;
+                        border-color: $cor_n_Xxclaro;
+                    }
+                }
+                &.btn-dark {
+                    border-color: $cor_n_Xxescuro;
+                    color: $cor_n_Xxescuro;
+                    &:hover {
+                        background-color: $cor_n_Xxescuro;
+                        color: sintaxCor( $cor);
+                        ;
+                        border-color: $cor_n_Xxescuro;
+                    }
+                }
+            }
+        }
+    }
+    &.btn-underline {
+        background-color: transparent;
+        border-bottom: 2px solid;
+        padding: 0 2px;
+        height: inherit;
+        color: $cor_primaria_1;
+        border-radius: inherit;
+        border-color: transparent;
+        &:hover {
+            color: $cor_primaria_1;
+            background-color: transparent;
+            border-color: $cor_primaria_1;
+        }
+        @each $cor in $coresBtn {
+            &.btn-#{$cor} {
+                color: sintaxCor( $cor);
+                &:hover {
+                    color: sintaxCor( $cor);
+                    background-color: transparent;
+                    border-color: sintaxCor( $cor);
+                }
+            }
+        }
+    }
+    &.btn-small {
+        @include Small ($font-bold, 1.5);
+        padding: $spacing-xxs $spacing-s;
+        height: 2rem;
+        &.btn-ghost {
+            padding: calc(#{$spacing-xxs} - 2px) calc(#{$spacing-s} - 2px);
+        }
+        &.btn-underline {
+            padding: 0 2px;
+            height: inherit;
+        }
+    }
+    &.btn-icon-left {
+        &[class*=" icon-"] {
+            &:before {
+                margin-right: $spacing-xs;
+                order: 0;
+            }
+        }
+    }
+    &.btn-icon-right {
+        &[class*=" icon-"] {
+            &:before {
+                margin-right: 0;
+                margin-left: $spacing-xs;
+                order: 9;
+            }
+        }
+    }
+    &.btn-icon-circle {
+        border-radius: $spacing-xxl;
+        padding: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        justify-content: center;
+        &[class*=" icon-"] {
+            &:before {
+                margin-right: 0;
+                margin-left: 0;
+                order: 0;
+            }
+        }
+        &.btn-underline {
+            border-radius: 0;
+            width: 1.5rem;
+            padding-bottom: $spacing-xxs;
+        }
+        &.btn-small {
+            padding: 0;
+            height: 2rem;
+            width: 2rem;
+            &.btn-underline {
+                width: 1rem;
+                padding-bottom: $spacing-xxs;
+            }
+        }
+    }
+}

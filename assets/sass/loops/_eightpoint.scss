@@ -1,0 +1,152 @@
+// Minimo valor para atributos
+@each $atr in $atributos {
+	.#{$atr}-xxs {
+		#{$atr}: .25rem !important;
+	}
+	@if $atr == margin {
+		.#{$atr}-neg-xxs {
+			#{$atr}: -.25rem !important;
+		}
+	}
+}
+@each $atrs in $atributos-espaco {
+    @each $side in $sides {
+        .#{$atrs}-#{$side}-xxs {
+            #{$atrs}-#{$side}: .25rem !important;
+        }
+        @if $atrs == margin {
+            .#{$atrs}-#{$side}-neg-xxs {
+                #{$atrs}-#{$side}: -.25rem !important;
+            }
+        }
+    }
+}
+@each $midia in $midias {
+    @media (min-width: sintaxMidia( $midia )) {
+        @each $atr in $atributos {
+            .#{$atr}-#{$midia}-xxs {
+                #{$atr}: .25rem !important;
+            }
+            @if $atr == margin {
+                .#{$atr}-neg-#{$midia}-xxs {
+                    #{$atr}: -.25rem !important;
+                }
+            }
+        }
+        @each $atrs in $atributos-espaco {
+            @each $side in $sides {
+                .#{$atrs}-#{$side}-#{$midia}-xxs {
+                    #{$atrs}-#{$side}: .25rem !important;
+                }
+                @if $atrs == margin {
+                    .#{$atrs}-#{$side}-neg-#{$midia}-xxs {
+                        #{$atrs}-#{$side}: .25rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Loop de 0 a 12 para regra de eightpoint
+@for $i from 0 through 12 {
+    $rem: $i / 2 + rem;
+
+    // Espaçamento - margin, padding, border-radius
+    @each $atr in $atributos {
+        .#{$atr}-#{$i} {
+			#{$atr}: $rem !important;
+		}
+        @if $atr == margin {
+            .#{$atr}-neg-#{$i} {
+                #{$atr}: unquote('-#{$rem} !important');
+            }
+        }
+    }
+    @each $atrs in $atributos-espaco {
+        @each $side in $sides {
+            .#{$atrs}-#{$side}-#{$i} {
+                #{$atrs}-#{$side}: $rem !important;
+            }
+            @if $atrs == margin {
+                .#{$atrs}-#{$side}-neg-#{$i} {
+                    #{$atrs}-#{$side}: unquote('-#{$rem} !important');
+                }
+            }
+        }
+    }
+    //Border Radius para cada lado individual
+    @each $vertside in $vertsides {
+		@each $horizonside in $horizonsides {
+			.border-#{$vertside}-#{$horizonside}-radius-#{$i} {
+				border-#{$vertside}-#{$horizonside}-radius: $rem !important;
+			}
+		}
+    }
+    
+    //Atributos para tamanho e posicionamento
+    @each $atr in $atrbsize {
+        .#{$atr}-#{$i} {
+            #{$atr}: $rem !important;
+        }
+    }
+
+    // Quadrado
+    .quadrado-#{$i}{
+		width: $rem;
+		height: $rem;
+	}
+}
+@for $i from 0 through 12 {
+    $rem: $i / 2 + rem;
+    // Breakpoints
+    @each $midia in $midias {
+        @media (min-width: sintaxMidia( $midia )) {
+            // Espaçamento - margin, padding, border-radius
+            @each $atr in $atributos {
+                .#{$atr}-#{$midia}-#{$i} {
+                    #{$atr}: $rem !important;
+                }
+                @if $atr == margin {
+                    .#{$atr}-neg-#{$midia}-#{$i} {
+                        #{$atr}: unquote('-#{$rem} !important');
+                    }
+                }
+            }
+            @each $atrs in $atributos-espaco {
+                @each $side in $sides {
+                    .#{$atrs}-#{$side}-#{$midia}-#{$i} {
+                        #{$atrs}-#{$side}: $rem !important;
+                    }
+                    @if $atrs == margin {
+                        .#{$atrs}-#{$side}-neg-#{$midia}-#{$i} {
+                            #{$atrs}-#{$side}: unquote('-#{$rem} !important');
+                        }
+                    }
+                }
+            }
+            //Border Radius para cada lado individual
+            @each $vertside in $vertsides {
+                @each $horizonside in $horizonsides {
+                    .border-#{$vertside}-#{$horizonside}-radius-#{$midia}-#{$i} {
+                        border-#{$vertside}-#{$horizonside}-radius: $rem !important;
+                    }
+                }
+            }
+
+            //Atributos para tamanho e posicionamento
+            @each $atr in $atrbsize {
+                .#{$atr}-#{$midia}-#{$i} {
+                    #{$atr}: $rem !important;
+                }
+            }
+            
+            // Quadrado
+            .quadrado-#{$midia}-#{$i}{
+                width: $rem !important;
+                height: $rem !important;
+            }
+        }
+    }
+
+}

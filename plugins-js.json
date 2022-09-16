@@ -1,0 +1,10 @@
+[{
+    "arquivos": [
+        "./node_modules/jquery/dist/jquery.js",
+        "./node_modules/slick-carousel/slick/slick.js",
+        "./node_modules/lity/dist/lity.js",
+        "./node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+        "./node_modules/lozad/dist/lozad.js",
+        "./node_modules/jquery-mask-plugin/dist/jquery.mask.js"
+    ]
+}]

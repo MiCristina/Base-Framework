@@ -1,0 +1,15 @@
+@each $gradient in $gradientes {
+	.background-#{$gradient}{
+		background: selectGradient( $gradient ) !important;
+	}
+}
+
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		@each $gradient in $gradientes {
+			.background-#{$midia}-#{$gradient}{
+				background: selectGradient( $gradient ) !important;
+			}
+		}
+	}
+}

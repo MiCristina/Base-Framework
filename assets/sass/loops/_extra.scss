@@ -1,0 +1,41 @@
+// Classes adicionais
+.visible-none {
+	visibility: hidden !important;
+}
+.o-auto {
+	overflow: auto !important;
+}
+.o-hidden {
+	overflow: hidden !important;
+}
+.o-scroll-y {
+	overflow-y: scroll !important;
+}
+.o-scroll-x {
+	overflow-x: scroll !important;
+}
+.media-sreem-width-default{
+	min-width: inherit !important;
+}
+.media-sreem-height-default{
+	min-height: inherit !important;
+}
+.media-sreem-width-full{
+	min-width: 100vh !important;
+}
+.media-sreem-height-full{
+	min-height: 100vh !important;
+}
+.height-auto {
+	height: auto !important;
+}
+.width-auto {
+	width: auto !important;
+}
+
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		// Classes adicionais
+		@include defaultClasses( $midia );
+	}
+}

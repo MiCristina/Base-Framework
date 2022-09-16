@@ -1,0 +1,172 @@
+@mixin opacity($value){
+	$IEValue: $value*100;
+	opacity: $value;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+	filter: alpha(opacity=$IEValue);
+}
+
+@mixin quadrado( $px ){
+	width: $px;
+	height: $px;
+}
+
+@mixin fonte-icone-new {
+	font-family: icone-new;
+	color: #000;
+	background: #fff;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+@mixin centerVertHoriz{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%)
+}
+
+@mixin centerVert {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+@mixin circulo( $px ) {
+	width: $px;
+	height: $px;
+	border-radius: $px;
+}
+
+@mixin espacamento( $rem ){
+	padding-top: $rem;
+	padding-bottom: $rem;
+}
+
+@mixin input-placeholder($color) {
+	&::-moz-placeholder {
+		color: $color;
+	}
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin scale( $scale ){
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-o-transform: scale($scale);
+	-ms-transform: scale($scale);
+	transform: scale($scale);
+}
+
+@mixin translate( $x, $y ){
+	-webkit-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	-o-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+
+@mixin rotate( $deg ){
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	transform: rotate($deg);
+}
+
+@mixin flex-shrink( $number ){
+	-webkit-flex-shrink: $number;
+	-ms-flex-shrink: $number;
+	flex-shrink: $number;
+}
+
+@mixin Fonte($fonte, $size, $height) {
+    font-family: $fonte;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin Hero($fonte, $height) {
+    font-family: $fonte;
+    font-size: 3.75rem;
+    line-height: $height;
+}
+
+@mixin Spotlight($fonte, $height) {
+    font-family: $fonte;
+    font-size: 2.5rem;
+    line-height: $height;
+}
+
+@mixin Title1($fonte, $height) {
+    font-family: $fonte;
+    font-size: 2rem;
+    line-height: $height;
+}
+
+@mixin Title2($fonte, $height) {
+    font-family: $fonte;
+    font-size: 1.5rem;
+    line-height: $height;
+}
+
+@mixin Body1($fonte, $height) {
+    font-family: $fonte;
+    font-size: 1.125rem;
+    line-height: $height;
+}
+
+@mixin Body2($fonte, $height) {
+    font-family: $fonte;
+    font-size: 1rem;
+    line-height: $height;
+}
+
+@mixin Small($fonte, $height) {
+    font-family: $fonte;
+    font-size: 0.875rem;
+    line-height: $height;
+}
+
+@mixin Mini($fonte, $height) {
+    font-family: $fonte;
+    font-size: 0.75rem;
+    line-height: $height;
+}
+
+@-webkit-keyframes scale-up-top {
+	0% {
+		-webkit-transform: scale(.5);
+		transform: scale(.5);
+		-webkit-transform-origin: 50% 0;
+		transform-origin: 50% 0
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transform-origin: 50% 0;
+		transform-origin: 50% 0
+	}
+}
+
+@keyframes scale-up-top {
+	0% {
+		-webkit-transform: scale(.5);
+		transform: scale(.5);
+		-webkit-transform-origin: 50% 0;
+		transform-origin: 50% 0
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transform-origin: 50% 0;
+		transform-origin: 50% 0
+	}
+}

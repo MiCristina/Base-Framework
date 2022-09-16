@@ -1,0 +1,6 @@
+@for $i from 1 through 12 {
+	$valueRem: valueRem( $i );
+	.box-shadown-#{$i}{
+		box-shadow: 0 calc(#{$valueRem} /2) valueRem( $i ) rgba($cor_n_Xxescuro, .2) !important;
+	}
+}

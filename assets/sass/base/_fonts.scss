@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "averta_bold";
+  src: url("../font/AvertaStd-Bold.eot");
+  src: url("../font/AvertaStd-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../font/AvertaStd-Bold.woff2") format("woff2"),
+    url("../font/AvertaStd-Bold.woff") format("woff"),
+    url("../font/AvertaStd-Bold.ttf") format("truetype"),
+    url("../font/AvertaStd-Bold.svg#AvertaStd-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "averta_regular";
+  src: url("../font/AvertaStd-Regular.eot");
+  src: url("../font/AvertaStd-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../font/AvertaStd-Regular.woff2") format("woff2"),
+    url("../font/AvertaStd-Regular.woff") format("woff"),
+    url("../font/AvertaStd-Regular.ttf") format("truetype"),
+    url("../font/AvertaStd-Regular.svg#AvertaStd-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "mrv-icones";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("/build/fonts/mrv-icons.eot?08072020");
+  src: url("/build/fonts/mrv-icons.eot?08072020#iefix")
+      format("embedded-opentype"),
+    url("/build/fonts/mrv-icons.woff?08072020") format("woff"),
+    url("/build/fonts/mrv-icons.ttf?08072020") format("truetype"),
+    url("/build/fonts/mrv-icons.svg?08072020#header-footer") format("svg");
+}
+
+.Hero {
+  @include Hero($font-bold, 1);
+}
+
+.Spotlight {
+  @include Spotlight($font-bold, 1);
+}
+
+.Title1 {
+  @include Title1($font-bold, 1);
+}
+
+.Title2 {
+  @include Title2($font-bold, 1);
+}
+
+.Body1 {
+  @include Body1($font-regular, 1.5);
+}
+
+.Body2 {
+  @include Body2($font-regular, 1.5);
+}
+
+.Small {
+  @include Small($font-regular, 1.5);
+}
+
+.Mini {
+  @include Mini($font-regular, 1.5);
+}
+
+.Hero-regular {
+  @include Hero($font-regular, 1);
+}
+
+.Spotlight-regular {
+  @include Spotlight($font-regular, 1);
+}
+
+.Title1-regular {
+  @include Title1($font-regular, 1);
+}
+
+.Title2-regular {
+  @include Title2($font-regular, 1);
+}
+
+.Body1-regular {
+  @include Body1($font-regular, 1.5);
+}
+
+.Body2-regular {
+  @include Body2($font-regular, 1.5);
+}
+
+.Small-regular {
+  @include Small($font-regular, 1.5);
+}
+
+.Mini-regular {
+  @include Mini($font-regular, 1.5);
+}
+
+.Hero-bold {
+  @include Hero($font-bold, 1);
+}
+
+.Spotlight-bold {
+  @include Spotlight($font-bold, 1);
+}
+
+.Title1-bold {
+  @include Title1($font-bold, 1);
+}
+
+.Title2-bold {
+  @include Title2($font-bold, 1);
+}
+
+.Body1-bold {
+  @include Body1($font-bold, 1.5);
+}
+
+.Body2-bold {
+  @include Body2($font-bold, 1.5);
+}
+
+.Small-bold {
+  @include Small($font-bold, 1.5);
+}
+
+.Mini-bold {
+  @include Mini($font-bold, 1.5);
+}
+
+@each $midia in $midias {
+  @media (min-width: sintaxMidia( $midia)) {
+    .Hero-#{$midia} {
+      @include Hero($font-bold, 1);
+    }
+    .Spotlight-#{$midia} {
+      @include Spotlight($font-bold, 1);
+    }
+    .Title1-#{$midia} {
+      @include Title1($font-bold, 1);
+    }
+    .Title2-#{$midia} {
+      @include Title2($font-bold, 1);
+    }
+    .Body1-#{$midia} {
+      @include Body1($font-regular, 1.5);
+    }
+    .Body2-#{$midia} {
+      @include Body2($font-regular, 1.5);
+    }
+    .Small-#{$midia} {
+      @include Small($font-regular, 1.5);
+    }
+    .Mini-#{$midia} {
+      @include Mini($font-regular, 1.5);
+    }
+    .Hero-#{$midia}-regular {
+      @include Hero($font-regular, 1);
+    }
+    .Spotlight-#{$midia}-regular {
+      @include Spotlight($font-regular, 1);
+    }
+    .Title1-#{$midia}-regular {
+      @include Title1($font-regular, 1);
+    }
+    .Title2-#{$midia}-regular {
+      @include Title2($font-regular, 1);
+    }
+    .Body1-#{$midia}-regular {
+      @include Body1($font-regular, 1.5);
+    }
+    .Body2-#{$midia}-regular {
+      @include Body2($font-regular, 1.5);
+    }
+    .Small-#{$midia}-regular {
+      @include Small($font-regular, 1.5);
+    }
+    .Mini-#{$midia}-regular {
+      @include Mini($font-regular, 1.5);
+    }
+    .Hero-#{$midia}-bold {
+      @include Hero($font-bold, 1);
+    }
+    .Spotlight-#{$midia}-bold {
+      @include Spotlight($font-bold, 1);
+    }
+    .Title1-#{$midia}-bold {
+      @include Title1($font-bold, 1);
+    }
+    .Title2-#{$midia}-bold {
+      @include Title2($font-bold, 1);
+    }
+    .Body1-#{$midia}-bold {
+      @include Body1($font-bold, 1.5);
+    }
+    .Body2-#{$midia}-bold {
+      @include Body2($font-bold, 1.5);
+    }
+    .Small-#{$midia}-bold {
+      @include Small($font-bold, 1.5);
+    }
+    .Mini-#{$midia}-bold {
+      @include Mini($font-bold, 1.5);
+    }
+  }
+}

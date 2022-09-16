@@ -1,0 +1,113 @@
+.table{
+    border-top: 1px solid $cor_n_claro;
+
+    thead{
+        tr{
+            background-color: $cor_n_xclaro;
+            color: $cor_primaria_1;
+            border-bottom: 2px solid $cor_n_claro;
+            height: 2.5rem;
+
+            th{
+                padding: $spacing-xxs $spacing-xs;
+            }
+        }
+    }
+    tbody{
+        tr{
+            border-bottom: 1px solid $cor_n_claro;
+            height: 2.5rem;
+
+            &:hover{
+                background-color: $cor_n_xclaro;
+            }
+
+            th{
+                padding: $spacing-xxs $spacing-xs;
+            }
+            td{
+                padding: $spacing-xxs $spacing-xs;
+            }
+        }
+    }
+    tfoot{
+        tr{
+            background-color: $cor_n_xclaro;
+            color: $cor_primaria_1;
+            height: 2.5rem;
+
+            td{
+                padding: $spacing-xxs $spacing-xs;
+            }
+        }
+    }
+
+
+    &.table-striped{
+        tbody{
+            tr{
+                border-bottom: 1px solid $cor_n_claro;
+                height: 2.5rem;
+                background-color: $cor_n_xclaro;
+    
+                &:hover{
+                    background-color: $cor_n_claro;
+                }
+                &:nth-child(odd){
+                    background-color: $cor_n_Xxclaro;
+
+                    &:hover{
+                        background-color: $cor_n_claro;
+                    }
+                }
+            }
+        }
+    }
+    
+    &.table-dark{
+        thead{
+            tr{
+                background-color: $cor_n_xescuro;
+                color: $cor_primaria_4;
+                border-bottom: 2px solid $cor_n_escuro;
+            }
+        }
+        tbody{
+            tr{
+                border-bottom: 1px solid $cor_n_escuro;
+                background-color: $cor_n_Xxescuro;
+                color: $cor_n_xclaro;
+    
+                &:hover{
+                    background-color: $cor_n_xescuro;
+                }
+            }
+        }
+        tfoot{
+            tr{
+                background-color: $cor_n_xescuro;
+                color: $cor_primaria_4;
+            }
+        }
+        &.table-striped{
+            tbody{
+                tr{
+                    border-bottom: 1px solid $cor_n_escuro;
+                    height: 2.5rem;
+                    background-color: $cor_n_xescuro;
+        
+                    &:hover{
+                        background-color: $cor_n_escuro;
+                    }
+                    &:nth-child(odd){
+                        background-color: $cor_n_Xxescuro;
+    
+                        &:hover{
+                            background-color: $cor_n_escuro;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@each $cor in $cores {
+    .color-#{$cor} {
+        color: selectCor( $cor) !important;
+    }
+    .background-#{$cor} {
+        background-color: selectCor( $cor) !important;
+    }
+}
+
+@each $midia in $midias {
+    @media (min-width: sintaxMidia( $midia)) {
+        @each $cor in $cores {
+            .color-#{$midia}-#{$cor} {
+                color: selectCor( $cor) !important;
+            }
+            .background-#{$midia}-#{$cor} {
+                background-color: selectCor( $cor) !important;
+            }
+        }
+    }
+}

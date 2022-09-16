@@ -1,0 +1,83 @@
+// Espaçamento - margin, height, border-radius
+@each $atr in $atributos {
+	@each $space in $spaceamounts {
+		.#{$atr}-#{$space} {
+			#{$atr}: sintaxSpace( $space ) !important;
+		}
+		@if $atr == margin {
+			.#{$atr}-neg-#{$space} {
+				$value : sintaxSpace( $space );
+				#{$atr}: unquote('-#{$value} !important');
+			}
+		}
+	}
+}
+@each $atrs in $atributos-espaco {
+	@each $side in $sides {
+		@each $space in $spaceamounts {
+			.#{$atrs}-#{$side}-#{$space} {
+				#{$atrs}-#{$side}: sintaxSpace( $space ) !important;
+			}
+			@if $atrs == margin {
+				.#{$atrs}-#{$side}-neg-#{$space} {
+					$value : sintaxSpace( $space );
+					#{$atrs}-#{$side}: unquote('-#{$value} !important');
+				}
+			}
+		}
+	}
+}
+// Controle border radius individual
+@each $space in $spaceamounts {
+	@each $vertside in $vertsides {
+		@each $horizonside in $horizonsides {
+			.border-#{$vertside}-#{$horizonside}-radius-#{$space} {
+				border-#{$vertside}-#{$horizonside}-radius: sintaxSpace( $space ) !important;
+			}
+		}
+	}
+}
+
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		// Espaçamento - margim, height, border-radius
+		@each $atr in $atributos {
+			@each $space in $spaceamounts {
+				.#{$atr}-#{$midia}-#{$space} {
+					#{$atr}: sintaxSpace( $space ) !important;
+				}
+				@if $atr == margin {
+					.#{$atr}-neg-#{$midia}-#{$space} {
+						$value : sintaxSpace( $space );
+						#{$atr}: unquote('-#{$value} !important');
+					}
+				}
+			}
+		}
+		@each $atrs in $atributos-espaco {
+			@each $side in $sides {
+				@each $space in $spaceamounts {
+					.#{$atrs}-#{$side}-#{$midia}-#{$space} {
+						#{$atrs}-#{$side}: sintaxSpace( $space ) !important;
+					}
+					@if $atrs == margin {
+						.#{$atrs}-#{$side}-neg-#{$midia}-#{$space} {
+							$value : sintaxSpace( $space );
+							#{$atrs}-#{$side}: unquote('-#{$value} !important');
+						}
+					}
+				}
+			}
+        }
+		// Controle border radius individual
+		@each $space in $spaceamounts {
+			@each $vertside in $vertsides {
+				@each $horizonside in $horizonsides {
+					.border-#{$vertside}-#{$horizonside}-radius-#{$midia}-#{$space} {
+						border-#{$vertside}-#{$horizonside}-radius: sintaxSpace( $space ) !important;
+					}
+				}
+			}
+		}
+	}
+}

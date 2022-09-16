@@ -1,0 +1,219 @@
+﻿@import "geral";
+@import "helpers/_mixins";
+@import "helpers/_medias.scss";
+
+
+.sliderCards.slider {
+    @include medium-large {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .slick-list {
+        overflow: visible;
+    }
+}
+                                           
+.selos-card {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Camada_1' x='0px' y='0px' viewBox='0 0 140 40' style='enable-background:new 0 0 140 40;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:url(%23SVGID_1_);%7D .st1%7Bfill:%23242625;%7D%0A%3C/style%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='10.536' y1='40.4878' x2='0.7688' y2='30.862' gradientTransform='matrix(1 0 0 -1 0 42)'%3E%3Cstop offset='0' style='stop-color:%23000000'/%3E%3Cstop offset='1' style='stop-color:%23000000'/%3E%3C/linearGradient%3E%3Cpath class='st0' d='M2.1,8.9C0.8,8,0,6.8,0,5.5S0.8,2.9,2.1,2c1.5-1,3.3-1.5,5.1-1.4h2.5v9.8H7.2C5.4,10.4,3.6,9.9,2.1,8.9z'/%3E%3Cpath class='st1' d='M0,5.5C0,6.8,0.8,8,2.1,8.9c1.5,1,3.3,1.5,5.1,1.4L116,11.8c1.8,0,3.5,0.5,5.1,1.4c0.8,0.6,11,5.6,16.4,9.1 c2.9,1.9,2.9,5,0,6.9c-5.4,3.5-15.6,8.6-16.4,9.2c-1.5,1-3.3,1.5-5.1,1.4L7.2,38.4c-1.8,0-3.5-0.5-5.1-1.4C0.8,36.1,0,34.9,0,33.5 V19.3V5.5z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5.76%;
+    bottom: 87.50%;
+    left: -2.4%;
+    right: 64.89% !important;
+    width: 50%;
+    height: 40px;
+
+    p {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 21px;
+        padding: 10px 0 10px 25px;
+    }
+}
+
+.selos-cardD13{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='124' height='39' viewBox='0 0 124 39' fill='none'%3E%3Cpath d='M2.10014 8.1452C0.80341 7.27867 0 6.08603 0 4.77225C0 3.45848 0.80341 2.26584 2.10014 1.3993C3.61131 0.453555 5.36884 -0.0323442 7.1555 0.0016712H9.62681V9.55216H7.16491C5.37443 9.58277 3.61399 9.09372 2.10014 8.1452Z' fill='%23FF8B22'/%3E%3Cpath d='M0 4.77167C0 6.08544 0.80341 7.27808 2.10014 8.14462C3.61232 9.08811 5.36916 9.57382 7.1555 9.54225L100.001 10.9944C101.787 10.9604 103.545 11.4463 105.056 12.392C105.892 12.9464 116.055 17.8847 121.5 21.3369C124.399 23.1724 124.399 26.2519 121.5 28.0875C116.05 31.5443 105.888 36.4733 105.056 37.037C103.545 37.9827 101.787 38.4686 100.001 38.4346L7.1555 36.9825C5.36884 37.0165 3.61131 36.5306 2.10014 35.5848C0.80341 34.7183 0 33.5256 0 32.2119V18.2961V4.77167Z' fill='%23FF8B22'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5.76%;
+    bottom: 87.50%;
+    left: -2.4%;
+    right: 64.89% !important;
+    width: 50%;                                                                                                                            
+    height: 40px;
+
+    p {
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 20px;
+        padding: 14px 0 10px 19px;
+    }
+}
+
+
+.slider {
+    .icon-Play {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+
+        li.slick-active {
+            opacity: 0.48;
+        }
+
+        li {
+            background: #242625;
+            @include circulo(8px);
+            margin: 0 2px;
+
+            @include medium-large {
+                @include circulo(14px);
+            }
+
+            button {
+                color: transparent;
+                background: transparent;
+            }
+        }
+    }
+
+    .slick-slide {
+        height: 100%;
+
+        .videoYoutubeHome {
+            iframe {
+                width: 100%;
+                border-radius: 16px;
+                height: 185px;
+
+                @include medium-large {
+                    height: 440px;
+                }
+            }                                                        
+        }
+    }
+}
+.conteudoCard {
+    height: 280px;
+}
+
+.cardImoveis {
+    position: relative;
+    height: 260px;
+
+    img {
+        object-fit: cover;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 167px;
+        background: url('../../build/img/cards/cardFiltro.webp') left bottom no-repeat;
+        background-size: contain;
+    }
+}
+.statusImovel {
+    p {
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            width: 54px;
+            height: 4px;
+            background: #D9DDDB;
+            border-radius: 4px;
+        }
+    }
+}
+
+/*------------- CORES TIPOS defs IMOVEIS ------------- */
+@mixin estilizacao ($color) {
+    .colorBackgroundCard {
+        background: $color;
+    }
+
+    .statusImovel {
+        p {
+            i {
+                background: $color !important;
+            }
+
+            &::before {
+                background: $color;
+            }
+        }
+    }
+}
+.pre-lancamento {
+    @include estilizacao (#079D56);
+}
+.breve-lancamento {
+    @include estilizacao (#079D56);
+}
+.lancamento {
+    @include estilizacao (#FFB719);
+}
+.em-construcao, .pronto, .prontos {
+    @include estilizacao (#006B3F);
+}
+.ofertas {
+    .tipoStatus {                                                                       
+        text-transform: capitalize;
+    }
+}
+.empreendimento.item {
+    border-bottom: 4px solid transparent;
+}
+.class {
+    .colorBackgroundCard {
+        background: #00331F;
+
+        a {
+            color: #59E36B !important;
+        }
+    }
+
+    .empreendimento.item {
+        border: 2px solid #00331F;
+    }
+
+    .statusImovel {
+        p {
+            i {
+                background: linear-gradient( 45deg,#82EA5B,#82EA5B) !important;
+            }
+
+            &::before {
+                background: linear-gradient( 45deg,#82EA5B,#82EA5B) !important;
+            }
+        }
+    }
+}
+
+.aluguel {
+    @include estilizacao (#AC41D8);
+}
+.lotes {
+    @include estilizacao (#FF7F32);
+}

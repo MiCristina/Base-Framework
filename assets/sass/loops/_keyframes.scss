@@ -1,0 +1,47 @@
+@for $i from 1 through 9 {
+    .animation-duration-z#{$i} {
+        animation-duration: unquote(".#{$i}s") ;
+    }
+    .animation-delay-#{$i} {
+        animation-delay: unquote(".#{$i}s") ;
+    }
+}
+
+@for $i from 1 through 20 {
+
+    .animation-duration-#{$i} {
+        animation-duration: unquote("#{$i}s") ;
+    }
+}
+
+.animation-infinity{
+	animation-iteration-count: infinite;
+}
+
+.animation-timing-function-linear {
+    animation-timing-function: linear;
+}
+.animation-timing-function-ease {
+    animation-timing-function: ease;
+}
+.animation-timing-function-ease-in {
+    animation-timing-function: ease-in;
+}
+.animation-timing-function-ease-out {
+    animation-timing-function: ease-out;
+}
+.animation-timing-function-ease-in-out {
+    animation-timing-function: ease-in-out;
+}
+
+.animation-name-rotate{
+	animation-name: rotate;
+}
+@keyframes rotate {
+    0% {
+        @include rotate (0deg);
+    }
+    100% {
+        @include rotate (360deg);
+    }
+}

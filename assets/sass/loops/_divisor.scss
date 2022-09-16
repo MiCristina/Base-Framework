@@ -1,0 +1,51 @@
+.divisor{
+    width: 100%;
+    height: 1px;
+    @each $cor in $cores {
+        &-color-#{$cor}{
+            background-color: selectCor( $cor ) !important;
+        }
+    }
+}
+
+.divisor-right{
+    &:before{
+        content: '';
+        width: 1px;
+        display: block;
+        position: absolute;
+        top: .25rem;
+        bottom: .25rem;
+        right: 0;
+    }
+    @each $cor in $cores {
+        &-color-#{$cor}{
+            &:before{
+                background-color: selectCor( $cor ) !important;
+            }
+        }
+    }
+}
+
+@each $midia in $midias {
+    @media (min-width: sintaxMidia( $midia )) {
+        .divisor-right-#{$midia}{
+            &:before{
+                content: '';
+                width: 1px;
+                display: block;
+                position: absolute;
+                top: .25rem;
+                bottom: .25rem;
+                right: 0;
+            }
+            @each $cor in $cores {
+                &-color-#{$cor}{
+                    &:before{
+                        background-color: selectCor( $cor ) !important;
+                    }
+                }
+            }
+        }
+    }
+}

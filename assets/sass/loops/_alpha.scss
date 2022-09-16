@@ -1,0 +1,17 @@
+@each $alpha in $alphas {
+	.opacity-#{$alpha}{
+		$retunr_alpha: selectAlpha( $alpha );
+		@include opacity( $retunr_alpha );
+	}
+}
+
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		@each $alpha in $alphas {	
+			.opacity-#{$midia}-#{$alpha}{
+				$retunr_alpha: selectAlpha( $alpha );
+				@include opacity( $retunr_alpha );
+			}
+		}
+	}
+}

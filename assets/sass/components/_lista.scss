@@ -1,0 +1,160 @@
+$cores: (primaria_1, primaria_2, primaria_3, primaria_4, primaria_5, primaria_6, secundaria_1, secundaria_2, secundaria_3, secundaria_4, secundaria_5, secundaria_6, erro, neg_regular, neg_claro, desativo, n_Xxescuro, n_xescuro, n_escuro, n_regular, n_claro, n_xclaro, n_Xxclaro, );
+
+.lista {
+    li {
+        margin-bottom: $spacing-xs;
+
+        &.list-disc { 
+            list-style: disc;
+        }
+
+        &[class*=" icon-"] {
+            position: relative;
+            padding-left: $spacing-m;
+
+            &:before {
+                color: $cor_primaria_1;
+                position: absolute;
+                left: 0;
+                top: $spacing-xxs;
+                font-size: $spacing-s;
+            }
+
+            @each $cor in $cores {
+                &.icon-cor_#{$cor} {
+                    @if $cor == primaria_1 {
+                        &:before {
+                            color: $cor_primaria_1;
+                        }
+                    }
+
+                    @if $cor == primaria_2 {
+                        &:before {
+                            color: $cor_primaria_2;
+                        }
+                    }
+
+                    @if $cor == primaria_3 {
+                        &:before {
+                            color: $cor_primaria_3;
+                        }
+                    }
+
+                    @if $cor == primaria_4 {
+                        &:before {
+                            color: $cor_primaria_4;
+                        }
+                    }
+
+                    @if $cor == primaria_5 {
+                        &:before {
+                            color: $cor_primaria_5;
+                        }
+                    }
+
+                    @if $cor == primaria_6 {
+                        &:before {
+                            color: $cor_primaria_6;
+                        }
+                    }
+
+                    @if $cor == secundaria_1 {
+                        &:before {
+                            color: $cor_secundaria_1;
+                        }
+                    }
+
+                    @if $cor == secundaria_2 {
+                        &:before {
+                            color: $cor_secundaria_2;
+                        }
+                    }
+
+                    @if $cor == secundaria_3 {
+                        &:before {
+                            color: $cor_secundaria_3;
+                        }
+                    }
+
+                    @if $cor == secundaria_4 {
+                        &:before {
+                            color: $cor_secundaria_4;
+                        }
+                    }
+
+                    @if $cor == secundaria_5 {
+                        &:before {
+                            color: $cor_secundaria_5;
+                        }
+                    }
+
+                    @if $cor == secundaria_6 {
+                        &:before {
+                            color: $cor_secundaria_6;
+                        }
+                    }
+
+                    @if $cor == erro {
+                        &:before {
+                            color: $erro;
+                        }
+                    }
+
+                    @if $cor == neg_regular {
+                        &:before {
+                            color: $cor_neg_regular;
+                        }
+                    }
+
+                    @if $cor == neg_claro {
+                        &:before {
+                            color: $cor_neg_claro;
+                        }
+                    }
+
+                    @if $cor == n_Xxescuro {
+                        &:before {
+                            color: $cor_n_Xxescuro;
+                        }
+                    }
+
+                    @if $cor == n_xescuro {
+                        &:before {
+                            color: $cor_n_xescuro;
+                        }
+                    }
+
+                    @if $cor == n_escuro {
+                        &:before {
+                            color: $cor_n_escuro;
+                        }
+                    }
+
+                    @if $cor == n_regular {
+                        &:before {
+                            color: $cor_n_regular;
+                        }
+                    }
+
+                    @if $cor == n_claro {
+                        &:before {
+                            color: $cor_n_claro;
+                        }
+                    }
+
+                    @if $cor == n_xclaro {
+                        &:before {
+                            color: $cor_n_xclaro;
+                        }
+                    }
+
+                    @if $cor == n_Xxclaro {
+                        &:before {
+                            color: $cor_n_Xxclaro;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

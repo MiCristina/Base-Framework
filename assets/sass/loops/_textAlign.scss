@@ -1,0 +1,16 @@
+// Alinhamento de texto
+@each $arg in $arguments{
+	.text-align-#{$arg} {
+		text-align: $arg !important;
+	}
+}
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		// Alinhamento de texto
+		@each $arg in $arguments{
+			.text-align-#{$midia}-#{$arg} {
+				text-align: $arg !important;
+			}
+		}
+    }
+}

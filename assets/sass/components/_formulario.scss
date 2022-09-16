@@ -1,0 +1,135 @@
+.form-label {
+    label {
+        @include Small ($font-bold, 1.5);
+        display: block;
+        width: 100%;
+        margin-bottom: 0.125rem;
+        cursor: pointer;
+        &.change {
+            position: relative;
+            padding-left: $spacing-m;
+            margin-bottom: 0;
+            @include Mini ($font-regular, 1.5);
+        }
+    }
+    input {
+        &:not([type="submit"]) {
+            min-width: 10rem;
+            background-color: $cor_n_Xxclaro;
+            color: $cor_n_Xxescuro;
+            border: 2px solid $cor_n_claro;
+            border-radius: $spacing-xs;
+            @include Small ($font-regular, 1.5);
+            height: 2rem;
+            width: 100%;
+            padding: 0 $spacing-s;
+            @include input-placeholder ($cor_n_escuro);
+        }
+        &[type="checkbox"],
+        &[type="radio"] {
+            display: none;
+            +label {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: $spacing-s;
+                    height: $spacing-s;
+                    background-color: $cor_n_Xxclaro;
+                    border: 2px solid $cor_n_claro;
+                    border-radius: $spacing-xxs;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: .3rem;
+                    left: $spacing-xxs;
+                    width: $spacing-xs;
+                    height: $spacing-xxs;
+                    border-left: 1px solid $cor_n_Xxescuro;
+                    border-bottom: 1px solid $cor_n_Xxescuro;
+                    transform: rotate(-45deg);
+                    @extend %transition;
+                    opacity: 1;
+                }
+            }
+            &:checked+label {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+        &[type="submit"] {
+            width: 100%;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+    select {
+        height: 2rem;
+        option {
+            border: 0;
+        }
+    }
+    &.select-field {
+        &:after {
+            content: '';
+        }
+    }
+    textarea,
+    select {
+        min-width: 10rem;
+        background-color: $cor_n_Xxclaro;
+        border: 2px solid $cor_n_claro;
+        border-radius: $spacing-xs;
+        @include Small ($font-regular, 1.5);
+        padding: $spacing-xxs $spacing-s;
+    }
+    @each $cor in $coresNeutras {
+        &.#{$cor} {
+            input {
+                &:not([type="submit"]) {
+                    border-color: neutralcolor( $cor) !important;
+                }
+                &[type="checkbox"],
+                &[type="radio"] {
+                    +label {
+                        &:before {
+                            border-color: neutralcolor( $cor) !important;
+                        }
+                    }
+                }
+            }
+            textarea,
+            select {
+                border-color: neutralcolor( $cor) !important;
+            }
+        }
+    }
+    @each $cor in $coresNeutras {
+        &.focus-#{$cor} {
+            input {
+                &:focus {
+                    &:not([type="submit"]) {
+                        border-color: neutralcolor( $cor) !important;
+                    }
+                }
+                &[type="checkbox"],
+                &[type="radio"] {
+                    &:checked+label {
+                        &:before {
+                            border-color: neutralcolor( $cor) !important;
+                        }
+                    }
+                }
+            }
+            textarea,
+            select {
+                &:focus {
+                    border-color: neutralcolor( $cor) !important;
+                }
+            }
+        }
+    }
+}

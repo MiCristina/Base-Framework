@@ -1,0 +1,304 @@
+@function sintaxSpace( $var ) {
+	@if $var == xxs {
+		@return 0.25rem;
+	} @else if $var == xs {
+		@return 0.5rem;
+	} @else if $var == s {
+		@return 1rem;
+	} @else if $var == m {
+		@return 1.5rem;
+	} @else if $var == l {
+		@return 3rem;
+	} @else if $var == xl {
+		@return 4.5rem;
+	} @else if $var == xxl {
+		@return 6rem;
+	}
+}
+
+@function sintaxMidia( $var ) {
+	@if $var == sm {
+		@return 576px;
+	} @else if $var == md {
+		@return 768px;
+	} @else if $var == lg {
+		@return 992px;
+	} @else if $var == xl {
+		@return 1200px;
+	}
+}
+
+@mixin defaultClasses( $mid ){
+	.o-auto-#{$mid} {
+		overflow: auto;
+	}
+	.o-hidden-#{$mid} {
+		overflow: hidden;
+	}
+	.o-scroll-#{$mid}-y {
+		overflow-y: scroll;
+	}
+	.o-scroll-#{$mid}-x {
+		overflow-x: scroll;
+	}
+	.media-sreem-#{$mid}-width-default{
+		min-width: inherit;
+	}
+	.media-sreem-#{$mid}-height-default{
+		min-height: inherit;
+	}
+	.media-sreem-#{$mid}-width-full{
+		min-width: 100vh;
+	}
+	.media-sreem-#{$mid}-height-full{
+		min-height: 100vh;
+	}
+	.height-#{$mid}-auto {
+		height: auto;
+	}
+	.width-#{$mid}-auto {
+		width: auto;
+	}
+}
+
+@function selectVel( $var ) {
+	@if $var == 9{
+		@return .9s;
+	}
+	@else if $var == 8{
+		@return .8s;
+	}
+	@else if $var == 7{
+		@return .7s;
+	}
+	@else if $var == 6{
+		@return .6s;
+	}
+	@else if $var == 5{
+		@return .5s;
+	}
+	@else if $var == 4{
+		@return .4s;
+	}
+	@else if $var == 3{
+		@return .3s;
+	}
+	@else if $var == 2{
+		@return .2s;
+	}
+	@else if $var == 1{
+		@return .1s;
+	}
+}
+
+@function selectCor( $var ) {
+	@if $var == primaria_1{
+		@return $cor_primaria_1;
+	}
+	@else if $var == primaria_2{
+		@return $cor_primaria_2;
+	}
+	@else if $var == primaria_3{
+		@return $cor_primaria_3;
+	}
+	@else if $var == primaria_4{
+		@return $cor_primaria_4;
+	}
+	@else if $var == primaria_5{
+		@return $cor_primaria_5;
+	}
+	@else if $var == primaria_6{
+		@return $cor_primaria_6;
+	}
+	@else if $var == secundaria_1{
+		@return $cor_secundaria_1;
+	}
+	@else if $var == secundaria_2{
+		@return $cor_secundaria_2;
+	}
+	@else if $var == secundaria_3{
+		@return $cor_secundaria_3;
+	}
+	@else if $var == secundaria_4{
+		@return $cor_secundaria_4;
+	}
+	@else if $var == secundaria_5{
+		@return $cor_secundaria_5;
+	}
+	@else if $var == secundaria_6{
+		@return $cor_secundaria_6;
+	}
+	@else if $var == erro{
+		@return $erro;
+	}
+	@else if $var == alerta{
+		@return $alerta;
+	}
+	@else if $var == sucesso{
+		@return $sucesso;
+	}
+	@else if $var == neg_escuro{
+		@return $cor_neg_escuro;
+	}
+	@else if $var == neg_regular{
+		@return $cor_neg_regular;
+	}
+	@else if $var == neg_claro{
+		@return $cor_neg_claro;
+	}
+	@else if $var == n_Xxescuro{
+		@return $cor_n_Xxescuro;
+	}
+	@else if $var == n_xescuro{
+		@return $cor_n_xescuro;
+	}
+	@else if $var == n_escuro{
+		@return $cor_n_escuro;
+	}
+	@else if $var == n_regular{
+		@return $cor_n_regular;
+	}
+	@else if $var == n_claro{
+		@return $cor_n_claro;
+	}
+	@else if $var == n_xclaro{
+		@return $cor_n_xclaro;
+	}
+	@else if $var == n_Xxclaro{
+		@return $cor_n_Xxclaro;
+	}
+	@else if $var == fundo_1{
+		@return $cor_fundo_1;
+	}
+	@else if $var == fundo_2{
+		@return $cor_fundo_2;
+	}
+	@else if $var == fundo_3{
+		@return $cor_fundo_3;
+	}
+	@else if $var == fundo_4{
+		@return $cor_fundo_4;
+	}
+}
+
+@function neutralcolor( $var ) {
+	@if $var == n_Xxescuro{
+		@return $cor_n_Xxescuro;
+	}
+	@else if $var == n_xescuro{
+		@return $cor_n_xescuro;
+	}
+	@else if $var == n_escuro{
+		@return $cor_n_escuro;
+	}
+	@else if $var == n_regular{
+		@return $cor_n_regular;
+	}
+	@else if $var == n_claro{
+		@return $cor_n_claro;
+	}
+	@else if $var == n_xclaro{
+		@return $cor_n_xclaro;
+	}
+	@else if $var == n_Xxclaro{
+		@return $cor_n_Xxclaro;
+	}
+}
+
+@function selectGradient( $var ) {
+	@if $var == gradient-1{
+		@return $gradient-1;
+	}
+	@else if $var == gradient-2{
+		@return $gradient-2;
+	}
+	@else if $var == gradient-3{
+		@return $gradient-3;
+	}
+	@else if $var == gradient-4{
+		@return $gradient-4;
+	}
+	@else if $var == gradient-5{
+		@return $gradient-5;
+	}
+	@else if $var == gradient-6{
+		@return $gradient-6;
+	}
+}
+
+
+@function selectAlpha( $var ) {
+	@if $var == full{
+		@return 1;
+	}
+	@else if $var == 9{
+		@return .9;
+	}
+	@else if $var == 8{
+		@return .8;
+	}
+	@else if $var == 7{
+		@return .7;
+	}
+	@else if $var == 6{
+		@return .6;
+	}
+	@else if $var == 5{
+		@return .5;
+	}
+	@else if $var == 4{
+		@return .4;
+	}
+	@else if $var == 3{
+		@return .3;
+	}
+	@else if $var == 2{
+		@return .2;
+	}
+	@else if $var == 1{
+		@return .1;
+	}
+	@else if $var == 0{
+		@return 0;
+	}
+}
+
+@function valueRem( $var ) {
+	$result: $var / 2 +rem;
+	@return $result;
+}
+
+// Mídias
+$midias: (sm,  md, lg, xl);
+// Eight Point D3
+$spaceamounts: ( xxs, xs, s, m, l, xl, xxl );
+
+// Atributos espaçamento
+$atributos: (margin, padding, border-radius);
+$atributos-espaco: (margin, padding);
+// Controle de borda
+$vertsides: (top, bottom);
+$horizonsides: (left, right);
+
+// Posicionamento
+$sides: (top, bottom, left, right);
+
+// Largura e Altura Eight Point
+$sizes: (width, height);
+
+// Atributos para porcentagem
+$atrbsize: (width, height, left, right, top, bottom);
+$porcentagens: (inherit, 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+
+// Valores alinhamento de texto
+$arguments: (left, right, center, justify, start, end, inherit);
+
+// Atributos de velocidade
+$velocidades: (9, 8, 7, 6, 5, 4, 3, 2, 1);
+
+// Variaveis de cores
+$cores: (primaria_1, primaria_2, primaria_3, primaria_4, primaria_5, primaria_6, secundaria_1, secundaria_2, secundaria_3, secundaria_4, secundaria_5, secundaria_6, erro, alerta, sucesso, neg_escuro, neg_regular, neg_claro, n_Xxescuro, n_xescuro, n_escuro, n_regular, n_claro, n_xclaro, n_Xxclaro, fundo_1, fundo_2, fundo_3, fundo_4);
+$coresNeutras: (n_Xxescuro, n_xescuro, n_escuro, n_regular, n_claro, n_xclaro, n_Xxclaro);
+$gradientes: ( gradient-1, gradient-2, gradient-3, gradient-4, gradient-5, gradient-6 );
+// Atributos de alpha
+$alphas: (full, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0);

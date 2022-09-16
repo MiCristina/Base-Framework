@@ -1,0 +1,47 @@
+//Atributos para porcentagem width, height, left, right, top, bottom
+@each $atr in $atrbsize {
+	@each $porcent in $porcentagens{
+		@if $porcent == inherit or $porcent == 0 {
+			.#{$atr}-p-#{$porcent} {
+				#{$atr}: $porcent !important;
+			}
+		} @else {
+			.#{$atr}-p-#{$porcent} {
+				#{$atr}: unquote('#{$porcent}%') !important;
+			}
+		}
+	}
+}
+
+// Atributos para porcentagem z-index
+@each $porcent in $porcentagens{
+	.z-index-p-#{$porcent} {
+		z-index: $porcent !important;
+	}
+}
+
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		//Atributos para porcentagem width, height, left, right, top, bottom
+		@each $atr in $atrbsize {
+			@each $porcent in $porcentagens{
+				@if $porcent == inherit {
+					.#{$atr}-#{$midia}-p-#{$porcent} {
+						#{$atr}: $porcent !important;
+					}
+				} @else {
+					.#{$atr}-#{$midia}-p-#{$porcent} {
+						#{$atr}: unquote('#{$porcent}%') !important;
+					}
+				}
+			}
+		}
+
+		// Atributos para porcentagem z-index
+		@each $porcent in $porcentagens{
+			.z-index-#{$midia}-p-#{$porcent} {
+				z-index: $porcent !important;
+			}
+		}
+    }
+}

@@ -1,0 +1,42 @@
+@for $i from 1 through 4 {
+    .border-#{$i} {
+        border: #{$i}px solid !important;
+    }
+    @each $side in $sides {
+        .border-#{$side}-#{$i} {
+            border-#{$side}: #{$i}px solid !important;
+        }
+    }
+}
+@each $cor in $cores {
+	.border-color-#{$cor}{
+		border-color: selectCor( $cor ) !important;
+	}
+}
+@each $midia in $midias {
+    @media (min-width: sintaxMidia( $midia )) {
+        .border-#{$midia}-none {
+            border: none !important;
+        }
+        @each $side in $sides {
+            .border-#{$side}-#{$midia}-none {
+                border-#{$side}: none !important;
+            }
+        }
+        @for $i from 1 through 4 {
+            .border-#{$midia}-#{$i} {
+                border: #{$i}px solid;
+            }
+            @each $side in $sides {
+                .border-#{$side}-#{$midia}-#{$i} {
+                    border-#{$side}: #{$i}px solid !important;
+                }
+            }
+        }
+        @each $cor in $cores {
+            .border-color-#{$midia}-#{$cor}{
+                border-color: selectCor( $cor ) !important;
+            }
+        }
+    }
+}

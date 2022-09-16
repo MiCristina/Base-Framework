@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Framework 2.0</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.mrv.com.br/toporodapecore/build/css/frameWorkMRV.min.css">
+        <link rel="stylesheet" href="assets/sass/validacao.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    </head>
+
+    <body>
+        <form class="container needs-validation" novalidate>
+            <div class="col-md-12">
+                <label for="nomeId" class="Body2-bold">Qual o seu nome?</label>
+                <input type="text" class="form-control border-2 border-color-n_regular border-radius-1 height-5 padding-2" id="nomeId" name="nomeName" pattern="^[A-z]+[\s][A-z]+(?:[\s]+[a-zA-Z]+)*$" placeholder="Digite seu nome completo" required>
+                <div class="invalid-feedback">
+                    Digite seu nome completo!
+                </div>
+            </div>
+            <!-- <div class="col-md-12">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div> -->
+            <div class="col-md-12 margin-top-2">
+                <label for="validationCustom03" class="Body2-bold">Qual seu email?</label>
+                <input type="email" class="form-control border-2 border-color-n_regular border-radius-1 height-5 padding-2 display-block width-p-100" id="emailId" name="emailName" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Digite o e-mail que você mais usa"
+                    required>
+                <div class="invalid-feedback">
+                    Digite seu email corretamente!
+                </div>
+            </div>
+            <div class="col-md-12 margin-top-2">
+                <label for="validationCustom03" class="Body2-bold">Qual o seu telefone?</label>
+                <input type="text" class="form-control celular border-2 border-color-n_regular border-radius-1 height-5 padding-2" id="telefoneId" name="telefoneName" pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{5}-?\d{4}$" placeholder="Digite seu telefone celular" required>
+                <div class="invalid-feedback">
+                    Digite seu telefone corretamente!
+                </div>
+            </div>
+            <!-- <div class="col-md-12">
+                <label for="validationCustom03" class="Body2-bold">City</label>
+                <input type="text" class="form-control" id="validationCustom035" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>-->
+            <div class="col-md-12 margin-top-2">
+                <label for="validationCustom04" class="Body2-bold">Estado</label>
+                <select class="form-select border-2 border-color-n_regular border-radius-1 height-5 padding-2" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+              </select>
+                <div class="invalid-feedback">
+                    Selecione seu estado
+                </div>
+            </div>
+            <div class="col-md-12 margin-top-2">
+                <label for="validationCustom04" class="Body2-bold">Cidade</label>
+                <select class="form-select border-2 border-color-n_regular border-radius-1 height-5 padding-2" id="validationCustom044" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+              </select>
+                <div class="invalid-feedback">
+                    Selecione seu estado
+                </div>
+            </div>
+            <div class="col-12 margin-top-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label Small" for="invalidCheck">
+                        Estou de acordo com a <a href="https://www.mrv.com.br/institucional/pt/politica-de-privacidade" target="_blank" class="Small-bold color-primaria_1">política de privacidade</a> e receber contatos (Whatsapp, SMS, e-mail, ligações) das marcas MRV&CO.
+                    </label>
+                    <div class="invalid-feedback">
+                        Termo de aceite obrigatório!
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 margin-top-2">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+        <script src="/build/js/libs.min.js"></script>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+
+            var maskBehavior = function(val) {
+                    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+                },
+                brOptions = {
+                    onKeyPress: function(val, e, field, options) {
+                        field.mask(maskBehavior.apply({}, arguments), options);
+                    }
+                };
+
+            $('.celular').mask(maskBehavior, brOptions);
+        </script>
+    </body>
+
+
+</html>

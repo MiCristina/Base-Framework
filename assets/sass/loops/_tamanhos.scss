@@ -1,0 +1,21 @@
+// Tamanhos (width, height) Eight Point
+@each $size in $sizes {
+	@each $space in $spaceamounts {
+		.#{$size}-#{$space}{
+			#{$size}: sintaxSpace( $space ) !important;
+		}
+	}
+}
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+
+		// Tamanhos (width, height) Eight Point
+		@each $size in $sizes {
+			@each $space in $spaceamounts {
+				.#{$size}-#{$midia}-#{$space}{
+					#{$size}: sintaxSpace( $space ) !important;
+				}
+			}
+		}
+	}
+}

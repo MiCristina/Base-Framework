@@ -1,0 +1,33 @@
+// Quadrado Eight Point
+@each $space in $spaceamounts {
+	.quadrado-#{$space}{
+		width: sintaxSpace( $space ) !important;
+		height: sintaxSpace( $space ) !important;
+	}
+}
+
+@for $i from 1 through 12 {
+	.quadrado-#{$i}{
+		width:  valueRem( $i );
+		height:  valueRem( $i );
+	}
+}
+
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		// Quadrado Eight Point
+		@each $space in $spaceamounts {
+			.quadrado-#{$midia}-#{$space}{
+				width: sintaxSpace( $space );
+				height: sintaxSpace( $space );
+			}
+		}
+
+		@for $i from 1 through 12 {
+			.quadrado-#{$midia}-#{$i}{
+				width:  valueRem( $i );
+				height:  valueRem( $i );
+			}
+		}
+    }
+}

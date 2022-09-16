@@ -1,0 +1,21 @@
+@each $vel in $velocidades {
+	.animate-#{$vel}{
+		-webkit-transition: all selectVel( $vel ) ease;
+		-moz-transition: all selectVel( $vel ) ease;
+		-o-transition: all selectVel( $vel ) ease;
+		transition: all selectVel( $vel ) ease;
+	}
+}
+
+@each $midia in $midias {
+	@media (min-width: sintaxMidia( $midia )) {
+		@each $vel in $velocidades {
+			.animate-#{$midia}-#{$vel}{
+				-webkit-transition: all selectVel( $vel ) ease;
+				-moz-transition: all selectVel( $vel ) ease;
+				-o-transition: all selectVel( $vel ) ease;
+				transition: all selectVel( $vel ) ease;
+			}
+		}
+	}
+}

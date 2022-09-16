@@ -1,0 +1,123 @@
+@import "../helpers/variaveis";
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	vertical-align: baseline;
+	border: 0 none;
+
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&:before,&:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+:focus {
+	outline: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 1rem;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	word-wrap: break-word;
+	background: #fff !important;
+	color: $cor_n_Xxescuro;
+	font-family: $font-regular;
+}
+
+table {
+	width: 100%;
+}
+
+span {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+figure{
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	&.img-real-size{
+		max-width: inherit;
+		height: auto;
+	}
+}
+
+strong {
+	font-weight: bold;
+}
+
+input {
+	&[type="text"]{
+		width: 100%;
+	}
+}
+
+textarea {
+	width: 100%;
+	font-family: $font-regular;
+}
+
+select {
+	width: 100%;
+	-webkit-appearance: none;
+	/* Remove estilo padrão do Chrome */
+	-moz-appearance: none;
+	/* Remove estilo padrão do FireFox */
+	appearance: none;
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+.transition {
+@extend %transition;
+}
+
+@for $i from 1 through 16 {
+	$result: 22.5 * $i + deg;
+	.rotate-#{$i} {
+		@include rotate ($result);
+	}
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.hover-img-greyscale{
+	img{
+		filter: grayscale(100%);
+	}
+	&:hover{
+		img{
+			filter: grayscale(0%);
+		}
+	}
+}

@@ -1,0 +1,57 @@
+//FONTS
+$font-bold: 'averta_bold';
+$font-regular: 'averta_regular';
+//Cores
+//Cores da marca
+// Primaria
+$cor_primaria_1: #006B3F;
+$cor_primaria_2: #079D56;
+$cor_primaria_3: #00D38D;
+$cor_primaria_4: #82EA5B;
+$cor_primaria_5: #FF8B22;
+$cor_primaria_6: #FFB719;
+//Secundarias
+$cor_secundaria_1: #793F98;
+$cor_secundaria_2: #AC41D8;
+$cor_secundaria_3: #F7287C;
+$cor_secundaria_4: #FF5AAD;
+$cor_secundaria_5: #FFB719;
+$cor_secundaria_6: #FFF028;
+//Sistemicas
+//Feedback
+$erro: #E04C36;
+$alerta: #FFB81A;
+$sucesso: #38C783;
+//Nagtivas
+$cor_neg_escuro: #E04C36;
+$cor_neg_regular: #F4715D;
+$cor_neg_claro: #F49788;
+//Cores Neutras
+$cor_n_Xxescuro: #242625;
+$cor_n_xescuro: #434645;
+$cor_n_escuro: #5D615F;
+$cor_n_regular: #999E9C;
+$cor_n_claro: #D9DDDB;
+$cor_n_xclaro: #F0F2F1;
+$cor_n_Xxclaro: #FFFFFF;
+//Cores de fundo
+$cor_fundo_1: #EDF2F0;
+$cor_fundo_2: #F7F5F2;
+$cor_fundo_3: #F2F2F2;
+$cor_fundo_4: #FFFFFF;
+//Gradiente Backgrounds
+$gradient-1: linear-gradient(45deg, $cor_primaria_1, $cor_primaria_2);
+$gradient-2: linear-gradient(45deg, $cor_primaria_3, $cor_primaria_4);
+$gradient-3: linear-gradient(45deg, $cor_primaria_5, $cor_primaria_6);
+$gradient-4: linear-gradient(45deg, $cor_secundaria_1, $cor_secundaria_2);
+$gradient-5: linear-gradient(45deg, $cor_secundaria_3, $cor_secundaria_4);
+$gradient-6: linear-gradient(45deg, $cor_secundaria_5, $cor_secundaria_6);
+//Ritimo Vertical
+$spacing-xxs: 0.25rem;
+$spacing-xs: 0.5rem;
+$spacing-s: 1rem;
+$spacing-m: 1.5rem;
+$spacing-l: 3rem;
+$spacing-xl: 4.5rem;
+$spacing-xxl: 6rem;
+$string: 'teste';
