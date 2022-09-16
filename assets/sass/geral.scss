@@ -272,3 +272,17 @@ body {
     display: none;
     
 }
+
+.accordion {
+  .tab-content,
+  .tab-sub-content {
+      display: none;
+  }
+ 
+  .tab-title.active {
+      i {
+          animation-delay: 2s;
+          transform: rotate(180deg);
+      }
+  }
+}
